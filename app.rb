@@ -11,5 +11,10 @@ end
 # http://awesome.com/
 # http://google.com/ --- the "/" is important here
 get '/' do
+  erb :index  # erb says! hey! go find 'index.erb' and share it
+end
+
+# get: localhost/api/json
+get '/api/json' do
   some_json
 end
