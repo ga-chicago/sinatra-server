@@ -14,6 +14,10 @@ get '/' do
   erb :index  # erb says! hey! go find 'index.erb' and share it
 end
 
+get '/about' do
+  erb :about
+end
+
 # get: localhost/api/json
 get '/api/json' do
   some_json
