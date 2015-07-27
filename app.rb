@@ -6,6 +6,14 @@ def some_json
   {:name => 'Sinatra', :message => 'Sinatra rocks!', :awesome => 'this is really, really awesome'}.to_json
 end
 
+## handle requests for resources not found?
+not_found do
+  #send results for not found resources
+  status 404
+  #{:status => 404, :message => 'Resource not found.'}.to_json
+  erb :not_found
+end
+
 # get request
 # http://localhost/
 # http://awesome.com/
